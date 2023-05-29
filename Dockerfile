@@ -5,10 +5,10 @@ FROM node:16
 WORKDIR /app
 
 # Copy the package.json and yarn.lock files to the container
-COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
 # Install project dependencies
-RUN yarn install --production
+RUN npm install --production
 
 # Copy the entire project directory to the container
 COPY . .
