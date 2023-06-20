@@ -1,9 +1,14 @@
 module.exports = [
   'strapi::errors',
   // 'strapi::security',
+  'strapi::poweredBy',
+  'strapi::cors',
   {
     name: 'strapi::security',
     config: {
+      enabled:true,
+      headers:'*',
+      origin:["http://localhost:1337", "https://abs-nyark-strapi-backend-production.up.railway.app/"],
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
@@ -17,9 +22,6 @@ module.exports = [
   },
 
 
-
-  'strapi::cors',
-  'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
   'strapi::body',

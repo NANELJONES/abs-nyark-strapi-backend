@@ -37,7 +37,7 @@ ENV CLOUDINARY_API_KEY=581658434511332
 ENV CLOUDINARY_API_SECRET=nImdsZ-N_k6OhuYdd_lIPwRv1eI
 # Expose the port specified in the Strapi configuration
 
-RUN ["npm", "run", "build"]
+RUN ["npm", "run", "build","develop"]
 
 EXPOSE 1337
 # Start the Strapi server
