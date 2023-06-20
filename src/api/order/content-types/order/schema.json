@@ -70,6 +70,9 @@
         "Order In Progress",
         "Order Completed"
       ]
+    },
+    "Taxes": {
+      "type": "string"
     }
   }
 }

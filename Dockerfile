@@ -1,5 +1,5 @@
 # Use the official Node.js 14.x image as the base image
-FROM node:16
+FROM node:14
 
 # Set the working directory in the container
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install project dependencies
-RUN npm ci --production
+RUN npm install --production
 
 # Copy the entire project directory to the container
 COPY . .
 
 # Set the environment variables required by Strapi
-ENV NODE_ENV staging
+ENV NODE_ENV production
 ENV DATABASE_CLIENT postgres
 ENV DATABASE_URL postgresql://postgres:xqPSxqCDqxMJ2Naat1fk@containers-us-west-138.railway.app:5943/railway
 ENV DATABASE_HOST containers-us-west-138.railway.app

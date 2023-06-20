@@ -6,9 +6,10 @@ module.exports = [
   {
     name: 'strapi::security',
     config: {
-      enabled:true,
-      headers:'*',
-      origin:["http://localhost:1337", "https://abs-nyark-strapi-backend-production.up.railway.app/"],
+      // enabled:true,
+      // headers:'*',
+      // origin:["http://localhost:1337", "https://abs-nyark-strapi-backend-production.up.railway.app/"],
+      
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
