@@ -1,5 +1,5 @@
 # Use the official Node.js 14.x image as the base image
-FROM node:14
+FROM node:16
 
 # Set the working directory in the container
 WORKDIR /app
@@ -15,13 +15,13 @@ COPY . .
 
 # Set the environment variables required by Strapi
 ENV NODE_ENV production
-ENV DATABASE_CLIENT postgres
-ENV DATABASE_URL postgresql://postgres:xqPSxqCDqxMJ2Naat1fk@containers-us-west-138.railway.app:5943/railway
-ENV DATABASE_HOST containers-us-west-138.railway.app
-ENV DATABASE_PORT 5943
-ENV DATABASE_NAME railway
-ENV DATABASE_USERNAME postgres
-ENV DATABASE_PASSWORD xqPSxqCDqxMJ2Naat1fk
+ENV DATABASE_CLIENT=postgres
+ENV DATABASE_URL=postgresql://postgres:xqPSxqCDqxMJ2Naat1fk@containers-us-west-138.railway.app:5943/railway
+ENV DATABASE_HOST=containers-us-west-138.railway.app
+ENV DATABASE_PORT=5943
+ENV DATABASE_NAME=railway
+ENV DATABASE_USERNAME=postgres
+ENV DATABASE_PASSWORD=xqPSxqCDqxMJ2Naat1fk
 
 ENV APP_KEYS k55ZTnh8zpp+RgfKGFH+ow==,emWScOj6oRLuo9GpElohpQ==,NcAhXOO3tLj/U6c8cc22qw==,JfLEaKTSdyJZsrLu2pQKhg==
 ENV API_TOKEN_SALT tKsFy7bb9BVQh4DD9MKROw==
@@ -30,9 +30,9 @@ ENV TRANSFER_TOKEN_SALT u6+oGpVtPXMdxmyKuaxKuw==
 ENV JWT_SECRET en+t18xlQnNT8dOmzl9x4g==
 
 # Set the Cloudinary configuration environment variables
-ENV CLOUDINARY_NAME dvpbxzktm
-ENV CLOUDINARY_API_KEY 581658434511332
-ENV CLOUDINARY_API_SECRET nImdsZ-N_k6OhuYdd_lIPwRv1eI
+ENV CLOUDINARY_NAME=dvpbxzktm
+ENV CLOUDINARY_API_KEY=581658434511332
+ENV CLOUDINARY_API_SECRET=nImdsZ-N_k6OhuYdd_lIPwRv1eI
 
 # Expose the port specified in the Strapi configuration
 EXPOSE 1337
